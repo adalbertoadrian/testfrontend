@@ -367,8 +367,9 @@ body .contactenos .formulario input {
   font-family: 'Oswald', sans-serif;
   font-size: 16px;
   color: white;
+  outline: none;
 }
-/* line 315, ../sass/paginas/index.scss */
+/* line 316, ../sass/paginas/index.scss */
 body .contactenos .formulario input[type="submit"] {
   border-bottom: 5px solid #5a940d;
   background-color: #8cc63f;
@@ -381,16 +382,16 @@ body .contactenos .formulario input[type="submit"] {
   height: 50px;
   margin-right: 10px;
 }
-/* line 323, ../sass/paginas/index.scss */
+/* line 324, ../sass/paginas/index.scss */
 body .contactenos .formulario input[type="submit"]:hover {
   background-color: #a0da53;
 }
-/* line 330, ../sass/paginas/index.scss */
+/* line 331, ../sass/paginas/index.scss */
 body .footer {
   background-color: #233855;
   margin-top: -16px;
 }
-/* line 333, ../sass/paginas/index.scss */
+/* line 334, ../sass/paginas/index.scss */
 body .footer p {
   text-align: center;
   font-size: 16px;

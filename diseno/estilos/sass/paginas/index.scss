@@ -312,6 +312,7 @@ body {
 				font-family: 'Oswald', sans-serif;
 				font-size: 16px;
 				color: $color-blanco;
+				outline: none;
 				&[type="submit"] {
 					border-bottom: 5px solid $color-verde - 50;
 					background-color: $color-verde;
