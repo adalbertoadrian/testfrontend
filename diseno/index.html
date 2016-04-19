@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="estilos/css/estilos.css">
+    <link rel="stylesheet" href="estilos/css/icomoon.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <title>Diseño</title>
+  </head>
+  <body>
+    <div class="numeros">
+      <span class="icon-old-mobile"></span>
+      <span>contactenos (+58)4147630544</span>
+    </div>
+    <div class="menu">
+      <ul>
+        <li><a href="#">Oportunidades</a></li>
+        <li class="submenu"><a href="#">Tipos de Inversion</a><span class="icon-chevron-down"></span>
+          <ul>
+            <li><a href="#">Centros Comerciales</a></li>
+            <li><a href="#">Oficinas</a></li>
+            <li><a href="#">Hoteles</a></li>
+            <li><a href="#">Vivienda Multifamiliar</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Beneficios</a></li>
+        <li><a href="#">¿Busca capital?</a></li>
+        <li><a href="#">Noticias</a></li>
+      </ul>
+    </div>
+    <div class="banner">
+      <div class="invierte">
+        <div class="text1">invierte en proyectos</div>
+        <div class="text2">inmobiliarios desde 20 millones</div>
+        <div class="link"><a href="#">Conozca las oportunidades</a></div>
+      </div>
+    </div>
+    <div class="body">
+      <div class="funciona">
+        <span class="title">¿Como funciona Domoly?</span>
+        <p class="parrafo">
+          <span class="subtitle">1. Búsqueda de las mejores oportunidades</span>
+          <span class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sed ligula eu risus vehicula malesuada. Proin malesuada ultrices tincidunt. Nam hendrerit feugiat libero. Suspendisse eget risus dolor. Duis nec justo non eros imperdiet iaculis.</span>
+        </p>
+        <div class="imagen"></div>
+      </div>
+      <div class="analisis">
+        <div class="imagen"></div>
+        <p class="parrafo">
+          <span class="subtitle">2. Análisis integral del proyecto</span>
+          <span class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sed ligula eu risus vehicula malesuada. Proin malesuada ultrices tincidunt. Nam hendrerit feugiat libero. Suspendisse eget risus dolor. Duis nec justo non eros imperdiet iaculis.</span>
+        </p>
+      </div>
+      <div class="estructuracion">
+        <p class="parrafo">
+          <span class="subtitle">3. Estructuración</span>
+          <span class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sed ligula eu risus vehicula malesuada. Proin malesuada ultrices tincidunt. Nam hendrerit feugiat libero. Suspendisse eget risus dolor. Duis nec justo non eros imperdiet iaculis.</span>
+        </p>
+        <div class="imagen"></div>
+      </div>
+      <div class="oferta">
+        <div class="imagen"></div>
+        <p class="parrafo">
+          <span class="subtitle">4. Oferta privada</span>
+          <span class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sed ligula eu risus vehicula malesuada. Proin malesuada ultrices tincidunt. Nam hendrerit feugiat libero. Suspendisse eget risus dolor. Duis nec justo non eros imperdiet iaculis.</span>
+        </p>
+      </div>
+    </div>
+    <div class="contactenos">
+        <div class="left">
+          <span class="title">Contactenos</span>
+          <div class="fondo"></div>
+          <span class="text">Sea el primero en recibir nuestras oportunidades de inversión.</span>
+        </div>
+        <div class="right">
+          <form action="" class="formulario">
+            <div class="form-item">
+              <label for="nombre">Nombre</label>
+              <input type="text" id="nombre">
+            </div>
+            <div class="form-item">
+              <label for="correo">Correo</label>
+              <input type="email" id="correo">
+            </div>
+            <div class="form-item">
+              <label for="telefono">Teléfono</label>
+              <input type="text" id="telefono">
+            </div>
+            <div class="form-item">
+              <input type="submit" value="Enviar">
+            </div>
+          </form>
+        </div>
+    </div>
+    <div class="footer">
+      <p>Desarrollado por Adalberto Adrián - adalberto.adrian@gmail.com</p>
+    </div>
+    <script>
+    //scroll menu
+      $(document).ready(function() {
+        $(window).scroll(function() {
+          if ($(this).scrollTop() > 50) {
+            $('.menu').addClass("scroll");
+          } else {
+            $('.menu').removeClass("scroll");
+          }
+        });
+      });
+      //submenu active
+      $( ".submenu" ).click(function() {
+        $(this).toggleClass("visible");
+        $('.submenu > span').toggleClass("icon-chevron-down");
+        $('.submenu > span').toggleClass("icon-chevron-up");
+      });
+      //form behavior
+      $( "input" ).focusin(function() {
+        $(this).parent('.form-item').addClass("active");
+      });
+      $( "input" ).focusout(function() {
+        var value=$.trim($(this).val());
+        if(value.length>0)
+        {
+         $(this).parent('.form-item').addClass("texto");
+        } else {
+         $(this).parent('.form-item').removeClass("texto");
+        }
+        $(this).parent('.form-item').removeClass("active");
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,5 @@
+@import 'breakpoint';
+
+$mobile-view: max-width 768px;
+$mobile-view-portrait: (max-width 760px) (orientation portrait);
+$mobile-small-landscape: (max-width 800px) (orientation landscape);

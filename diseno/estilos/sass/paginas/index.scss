@@ -1,0 +1,341 @@
+body {
+	margin-left: 0px;
+	margin-right: 0px;
+	.numeros {
+		position: fixed;
+		top: 0;
+		width: 100%;
+		background-color: $color-gris;
+		z-index: 1;
+		span {
+			display: block;
+			text-align: right;
+			color: $color-verde;
+			padding: 10px 20px;
+			font-family: 'Oswald', sans-serif;
+			text-transform: uppercase;
+			font-size: 14px;
+			&.icon-old-mobile {
+				float: right;
+				margin-top: 4px;
+			}
+		}
+	}
+	.menu {
+		position: fixed;
+		top: 41px;
+		width: 100%;
+		z-index: 1;
+		ul {
+			margin: 0 0 0 0;
+		}
+		&.scroll {
+			background-color: $color-azul;
+			@include box-shadow(0px 2px 2px $color-gris);
+			ul {
+				li:hover {
+					background-color: $color-blanco;
+					.icon-chevron-down {
+						color: $color-azul;
+					}
+					a {
+						color: $color-azul;
+					}
+				}
+				.submenu {
+					ul li {
+						background-color: $color-azul;
+						border-bottom: 1px solid $color-azul;
+						a {
+							color: $color-blanco;
+						}
+					}
+				}
+			}
+		}
+		ul {
+			float: right;
+			li {
+				list-style: none;
+				float: left;
+				padding: 10px 10px;
+				color: $color-blanco;
+				font-family: 'Open Sans Condensed', sans-serif;
+				font-size: 18px;
+				font-variant: small-caps;
+				font-weight: bold;
+				a {
+					color: $color-blanco;
+					text-decoration: none;
+				}
+				&.submenu {
+					cursor: pointer;
+					ul {
+						display: none;
+						float: none;
+						width: 200px;
+						position: absolute;
+						margin-top: 25px;
+						margin-left: -87px;
+						&:after, &:before {
+							bottom: 100%;
+							left: 70%;
+							border: solid transparent;
+							content: " ";
+							height: 0;
+							width: 0;
+							position: absolute;
+							pointer-events: none;
+						}
+
+						&:after {
+							border-color: rgba(136, 183, 213, 0);
+							border-bottom-color: $color-azul;
+							border-width: 10px;
+							margin-left: -30px;
+						}
+						&:before {
+							border-color: rgba(194, 225, 245, 0);
+							border-bottom-color: $color-azul;
+							border-width: 16px;
+							margin-left: -36px;
+						}
+						li {
+							float: left;
+							background-color: $color-azul;
+							padding: 5px 8px;
+							width: 100%;
+							text-align: center;
+							border-bottom: 1px solid $color-azul;
+							a {
+								color: $color-blanco;
+								text-decoration: none;
+							}
+							&:hover {
+								border-bottom: 1px solid $color-blanco;
+							}
+						}
+					}
+					&.visible {
+						ul {
+							display: block;
+						}
+					}
+				}
+			}
+		}
+	}
+	.banner {
+		width: 100%;
+		height: 350px;
+		background-image: url("../images/guayana.jpg");
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		margin-top: 41px;
+		.invierte {
+			width: 500px;
+			margin: 0 auto;
+			.text1,
+			.text2,
+			.link {
+				width: 100%;
+				text-align: center;
+				float: left;
+				font-family: 'Open Sans Condensed', sans-serif;
+				color: $color-blanco;
+			}
+			.text1 {
+				margin-top: 100px;
+				font-size: 42px;
+				text-transform: uppercase;
+				background-color: $color-gris;
+				opacity: 0.7;
+			}
+			.text2 {
+				font-size: 38px;
+				text-transform: uppercase;
+				background-color: $color-gris;
+				opacity: 0.7;
+				margin-top: 10px;
+				margin-bottom: 10px;
+			}
+			.link {
+				background-color: $color-verde;
+				width: 250px;
+				padding: 5px 8px;
+				@include border-radius(5px);
+				margin-left: 110px;
+				a {
+					color: $color-blanco;
+					text-decoration: none;
+					font-size: 24px;
+				}
+			}
+		}
+	}
+	.body {
+		.title {
+			width: 100%;
+			font-family: 'Open Sans Condensed', sans-serif;
+			color: $color-verde;
+			font-size: 32px;
+			text-align: center;
+			display: block;
+			margin-top: 20px;
+		}
+		.parrafo {
+			box-sizing: border-box;
+			width: 50%;
+			float: left;
+			padding: 50px 100px 0px 100px;
+			.text {
+				color: $color-gris + 50;
+				line-height: 30px;
+			}
+			.subtitle {
+				font-family: 'Open Sans Condensed', sans-serif;
+				width: 100%;
+				color: $color-negro;
+				text-align: left;
+				float: left;
+				font-size: 24px;
+				margin-bottom: 20px;
+				border-bottom: 3px solid $color-verde;
+			}
+		}
+		.imagen {
+			width: 50%;
+			float: left;
+			height: 400px;
+		}
+		.imagen {
+			background-size: 500px 350px;
+			background-repeat: no-repeat;
+			background-position: 100px 0px;
+		}
+		.funciona {
+			height: 450px;
+			.imagen {
+				background-image: url("../images/8.png");
+			}
+		}
+		.analisis {
+			height: 400px;
+			.imagen {
+				background-image: url("../images/14.png");
+			}
+		}
+		.estructuracion {
+			height: 400px;
+			.imagen {
+				background-image: url("../images/qescrowdfunding.png");
+			}
+		}
+		.oferta {
+			height: 400px;
+			.imagen {
+				background-image: url("../images/4.png");
+			}
+		}
+	}
+	.contactenos {
+		background-color: $color-gris;
+		width: 100%;
+		height: 300px;
+		.left,
+		.right {
+			float: left;
+			width: 50%;
+		}
+		.title {
+			width: 80%;
+			font-family: 'Open Sans Condensed', sans-serif;
+			color: $color-verde;
+			font-size: 32px;
+			text-align: left;
+			display: block;
+			padding-top: 20px;
+			margin-left: 50px;
+			border-bottom: 2px solid $color-verde;
+		}
+		.fondo {
+			width: 150px;
+			height: 150px;
+			background-image: url("../images/imagen-servicios-02.jpg");
+			background-size: 150px 150px;
+			background-position: 0px 15px;
+			@include border-radius(50%);
+			margin-top: 30px;
+			margin-left: 50px;
+			margin-right: 20px;
+			float: left;
+		}
+		.text {
+			display: block;
+			margin-top: 90px;
+			color: $color-blanco;
+			font-family: 'Open Sans Condensed', sans-serif;
+			font-size: 18px;
+		}
+		.formulario {
+			margin-top: 30px;
+			text-align: right;
+			margin-right: 100px;
+			.form-item {
+				margin-bottom: 20px;
+				&.active,
+				&.texto {
+					label {
+						margin-top: -20px;
+						font-size: 14px;
+						color: $color-verde;
+						transition: 0.5s all ease;
+					}
+				}
+			}
+			label {
+				position: absolute;
+				color: $color-blanco;
+				font-family: 'Oswald', sans-serif;
+				font-size: 18px;
+				padding-left: 10px;
+				transition: 0.5s all ease;
+			}
+			input {
+				width: 60%;
+				background-color: $color-gris;
+				border: none;
+				border-bottom: 2px solid $color-verde;
+				margin-bottom: 10px;
+				height: 25px;
+				padding: 5px 10px;
+				font-family: 'Oswald', sans-serif;
+				font-size: 16px;
+				color: $color-blanco;
+				&[type="submit"] {
+					border-bottom: 5px solid $color-verde - 50;
+					background-color: $color-verde;
+					color: $color-blanco;
+					cursor: pointer;
+					@include border-radius(5px);
+					height: 50px;
+					margin-right: 10px;
+					&:hover {
+						background-color: $color-verde + 20;
+					}
+				}
+			}
+		}
+	}
+	.footer {
+		background-color: $color-azul;
+		margin-top: -16px;
+		p {
+			text-align: center;
+			font-size: 16px;
+			font-family: 'Open Sans Condensed', sans-serif;
+			color: $color-blanco;
+			padding: 10px 0px;
+		}
+	}
+}
